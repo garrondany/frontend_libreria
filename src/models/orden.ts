@@ -5,9 +5,9 @@ export interface Orden {
     idLibro: number;
     //nombre del libro
     cantidad: number;
-    precioUnitario: number;//obtener del precio del libro
+    //precioUnitario: number;//obtener del precio del libro
     totalVenta: number;
     fechaEmision: Date;
-    //fecha creacion aumentar
-    //fecha moficacion aumentr
+    fechaCreacion: Date;
+    fechaMoficacion: Date;
   }

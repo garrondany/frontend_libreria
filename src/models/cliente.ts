@@ -3,6 +3,6 @@ export interface Cliente {
   nombre: string;
   telefono:number;
   email:string;
-  //fecha creacion aumentar
-  //fecha modificacion aumentar
+  fechaCreacion: Date;
+  fechaModificacion: Date;
 }

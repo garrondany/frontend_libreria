@@ -6,12 +6,12 @@ export interface Libro {
     editorial: string;
     idioma: string;
     isbn: string;
-    //tamañoArchivo: string; borrar
+    url: string;    
     numeroPaginas: number;
-    stock: string;
     precio: number;
-    url: string;
-    //fecha creacion aumentar
-    //fecha modificacion aumentar
+    stock: string;
+    fechaCreacion: Date;
+    fechaModificacion: Date;
+    //tamañoArchivo: string; borrar
 
   }
