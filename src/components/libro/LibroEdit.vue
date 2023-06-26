@@ -13,7 +13,9 @@ const autor = ref('')
 const fechaPublicacion = ref('') 
 const editorial = ref('')
 const idioma = ref('')
-const tamañoArchivo = ref('')
+const isbn = ref('')
+const url = ref('')
+//const tamañoArchivo = ref('')
 const numeroPaginas = ref(0)
 const stock = ref('')
 const precio = ref(0)
@@ -27,7 +29,9 @@ async function editarLibro() {
       fechaPublicacion: fechaPublicacion.value,
       editorial: editorial.value,
       idioma: idioma.value, 
-      tamañoArchivo: tamañoArchivo.value, 
+      isbn: isbn.value,
+      url: url.value,
+      //tamañoArchivo: tamañoArchivo.value, 
       numeroPaginas: numeroPaginas.value,
       stock: stock.value,
       precio: precio.value,
@@ -42,7 +46,9 @@ async function getLibro() {
     (fechaPublicacion.value = response.data.fechaPublicacion), 
     (editorial.value = response.data.editorial),
     (idioma.value = response.data.idioma),
-    (tamañoArchivo.value = response.data.tamañoArchivo),
+    (isbn.value = response.data.isbn),
+    (url.value = response.data.url),
+    //(tamañoArchivo.value = response.data.tamañoArchivo),
     (numeroPaginas.value = response.data.numeroPaginas),
     (stock.value = response.data.stock), 
     (precio.value = response.data.precio)
@@ -133,11 +139,22 @@ onMounted(() => {
           <input
             type="text"
             class="form-control"
-            v-model="tamañoArchivo"
-            placeholder="TamañoArchivo"
+            v-model="isbn"
+            placeholder="Isbn"
             required
           />
-          <label for="tamañoArchivo">Tamaño Archivo</label>
+          <label for="isbn">ISBN</label>
+        </div>
+
+        <div class="form-floating">
+          <input
+            type="text"
+            class="form-control"
+            v-model="url"
+            placeholder="Url"
+            required
+          />
+          <label for="url">URL</label>
         </div>
 
         <div class="form-floating">

@@ -59,10 +59,13 @@ onMounted(() => {
                         <th scope="col">Fecha Publicacion</th>
                         <th scope="col">Editorial</th>
                         <th scope="col">Idioma</th>
-                        <th scope="col">Tamaño Archivo</th>
+                        <th scope="col">ISBN</th>
+                        <th scope="col">URL</th>
                         <th scope="col">Número Páginas</th>
                         <th scope="col">Stock</th>
-                        <th scope="col">Precio</th>                        
+                        <th scope="col">Precio</th>
+                        <th scope="col">Fecha Creacion</th>
+                        <th scope="col">Fecha Modificacion</th>                          
                     </tr>
                 </thead>
                 <tbody>
@@ -73,10 +76,13 @@ onMounted(() => {
                         <td>{{ libro.fechaPublicacion }}</td>
                         <td>{{ libro.editorial }}</td>
                         <td>{{ libro.idioma }}</td>
-                        <td>{{ libro.tamañoArchivo }}</td>
+                        <td>{{ libro.isbn }}</td>
+                        <td>{{ libro.url }}</td>
                         <td>{{ libro.numeroPaginas }}</td>
                         <td>{{ libro.stock }}</td>
                         <td>{{ libro.precio }}</td>
+                        <td>{{ libro.fechaCreacion }}</td>
+                        <td>{{ libro.fechaModificacion }}</td>
                         <td>
                             <button class="btn btn-link" @click="toEdit(libro.id)">Editar</button>
                             <button class="btn btn-link" @click="toDelete(libro.id)">Eliminar</button>
