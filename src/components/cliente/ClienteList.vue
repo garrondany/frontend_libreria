@@ -55,14 +55,20 @@ onMounted(() => {
                     <tr>
                         <th scope="col">N°</th>
                         <th scope="col">Nombre</th>
+                        <th scope="col">Telefono</th>
                         <th scope="col">Email</th>
+                        <th scope="col">Fecha Creacion</th>
+                        <th scope="col">Fecha Modificacion</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr v-for="(cliente, index) in clientes.values()" :key="cliente.id">
                         <th scope="row">{{ index + 1 }}</th>
                         <td>{{ cliente.nombre }}</td>
+                        <td>{{ cliente.telefono }}</td>
                         <td>{{ cliente.email }}</td>
+                        <td>{{ cliente.fechaCreacion }}</td>
+                        <td>{{ cliente.fechaModificacion }}</td>
                         <td>
                             <button class="btn btn-link" @click="toEdit(cliente.id)">Editar</button>
                             <button class="btn btn-link" @click="toDelete(cliente.id)">Eliminar</button>

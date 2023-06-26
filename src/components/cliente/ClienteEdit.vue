@@ -9,6 +9,7 @@ const props = defineProps<{
 
 const ENDPOINT = props.ENDPOINT_API ?? ''
 const nombre = ref('')
+const telefono = ref(0)
 const email = ref('')
 const id = router.currentRoute.value.params['id']
 
@@ -16,6 +17,7 @@ async function editarCliente() {
   await http
     .patch(`${ENDPOINT}/${id}`, {
       nombre: nombre.value,
+      telefono: telefono.value,
       email: email.value,
     })
     .then(() => router.push('/clientes'))
@@ -23,7 +25,7 @@ async function editarCliente() {
 
 async function getCliente() {
   await http.get(`${ENDPOINT}/${id}`).then((response) => {
-    ;(nombre.value = response.data.nombre), (email.value = response.data.email)
+    ;(nombre.value = response.data.nombre), (telefono.value = response.data.telefono), (email.value = response.data.email)
   })
 }
 
@@ -59,7 +61,17 @@ onMounted(() => {
           <label for="nombre">Nombre</label>
         </div>
 
-              
+        <div class="form-floating">
+          <input
+            type="number"
+            class="form-control"
+            v-model="telefono"
+            placeholder="Telefono"
+            required
+          />
+          <label for="telefono">Telefono</label>
+        </div>
+        
         <div class="form-floating">
           <input
             type="text"
