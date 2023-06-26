@@ -9,7 +9,9 @@ const props = defineProps<{
 
 const ENDPOINT = props.ENDPOINT_API ?? ''
 const idCliente = ref(0)
+const nombreCliente = ref('')
 const idLibro = ref(0)
+const nombreLibro = ref('')
 const cantidad = ref(0)
 const precioUnitario = ref(0)
 const totalVenta = ref(0)
@@ -32,7 +34,9 @@ async function editarOrden() {
 async function getOrden() {
     await http.get(`${ENDPOINT}/${id}`).then((response) => {; 
         (idCliente.value = response.data.idCliente),
+        (nombreCliente.value = response.data.nombreCliente),
         (idLibro.value = response.data.idLibro),
+        (nombreLibro.value = response.data.nombreLibro),
         (cantidad.value = response.data.cantidad),
         (precioUnitario.value = response.data.precioUnitario),
         (totalVenta.value = response.data.totalVenta),

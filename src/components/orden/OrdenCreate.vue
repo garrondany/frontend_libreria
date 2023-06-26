@@ -85,7 +85,7 @@ function goBack() {
             required
           />
           <label for="precioUnitario">Precio Unitario</label>
-        </div>   
+        </div>
 
         <div class="form-floating">
           <input

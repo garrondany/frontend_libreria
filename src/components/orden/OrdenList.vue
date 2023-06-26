@@ -56,11 +56,15 @@ onMounted(() => {
                         <!-- encabezados de la lista-->
                         <th scope="col">N°</th>
                         <th scope="col">idCliente</th>
-                        <th scope="col">idLibro</th>                        
+                        <th scope="col">nombreCliente</th>
+                        <th scope="col">idLibro</th>     
+                        <th scope="col">nombreLibro</th>                   
                         <th scope="col">Cantidad</th>
                         <th scope="col">precio Unitario</th>
                         <th scope="col">Total Venta</th>
-                        <th scope="col">Fecha Emision</th>     
+                        <th scope="col">Fecha Emision</th>  
+                        <th scope="col">Fecha Creacion</th>    
+                        <th scope="col">Fecha Modificacion</th> 
                                           
                     </tr>
                 </thead>
@@ -68,12 +72,15 @@ onMounted(() => {
                     <tr v-for="(orden, index) in ordenes.values()" :key="orden.id">
                         <th scope="row">{{ index + 1 }}</th>
                         <td>{{ orden.idCliente }}</td>
-                        <td>{{ orden.idLibro }}</td>                        
+                        <td>{{ orden.nombreCliente }}</td>
+                        <td>{{ orden.idLibro }}</td>  
+                        <td>{{ orden.nombreLibro }}</td>                   
                         <td>{{ orden.cantidad }}</td>
                         <td>{{ orden.precioUnitario }}</td>
                         <td>{{ orden.totalVenta }}</td>
                         <td>{{ orden.fechaEmision }}</td>
-                 
+                        <td>{{ orden.fechaCreacion }}</td>
+                        <td>{{ orden.fechaModificacion }}</td>
                         <td>
                             <button class="btn btn-link" @click="toEdit(orden.id)">Editar</button>
                             <button class="btn btn-link" @click="toDelete(orden.id)">Eliminar</button>
