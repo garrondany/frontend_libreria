@@ -80,6 +80,7 @@ onMounted(() => {
                         <td>{{ libro.idioma }}</td>
                         <td>{{ libro.isbn }}</td>
                         <td>{{ libro.url }}</td>
+                        
                         <td>{{ libro.numeroPaginas }}</td>
                         <td>{{ libro.stock }}</td>
                         <td>{{ libro.precio }}</td>
