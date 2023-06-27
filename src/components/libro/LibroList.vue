@@ -66,7 +66,7 @@ onMounted(() => {
                         <th scope="col">Stock</th>
                         <th scope="col">Precio</th>
                         <th scope="col">Fecha Creacion</th>
-                        <th scope="col">Fecha Modificacion</th>                          
+                        <th scope="col">Fecha Modificacion</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -79,8 +79,10 @@ onMounted(() => {
                         <td>{{ libro.editorial }}</td>
                         <td>{{ libro.idioma }}</td>
                         <td>{{ libro.isbn }}</td>
-                        <td>{{ libro.url }}</td>
-                        
+                        <!-- <td>{{ libro.url }}</td> -->
+                        <a href="#">
+                            <img :src="libro.url" alt="Producto" width="50" height="50">
+                        </a>
                         <td>{{ libro.numeroPaginas }}</td>
                         <td>{{ libro.stock }}</td>
                         <td>{{ libro.precio }}</td>
