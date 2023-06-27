@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import type { Cliente } from '@/models/cliente';
 import type { Orden } from '@/models/orden'
 import http from '@/plugins/axios'
 import router from '@/router'
@@ -10,6 +11,7 @@ const props = defineProps<{
 
 const ENDPOINT = props.ENDPOINT_API ?? ''
 var ordenes = ref<Orden[]>([])
+var clientes = ref<Cliente[]>([])
 
 async function getOrdenes() {
     ordenes.value = await http.get(ENDPOINT).then((response) => response.data)
@@ -49,18 +51,46 @@ onMounted(() => {
             </div>
         </div>
 
+
+
+
+        <!--async findAll(): Promise<OrdenEntity[]> {
+    return this.ordenRepository.find({
+      relations: { cliente: true, libro: true },
+      select: { id: true, idCliente: true, idLibro: true, totalVenta: true, fechaEmision: true, cliente: { nombre: true }, libro: { titulo: true, precio: true } }
+    });
+    // return this.ordenRepository.createQueryBuilder('orden')
+    //   .innerJoin('orden.cliente', 'cliente')
+    //   .innerJoin('orden.libro', 'libro')
+    //   .select(['orden.id', 'orden.totalVenta'])
+    //   .getMany();
+  }
+
+  async findOne(id: number): Promise<OrdenEntity> {
+    const orden = await this.ordenRepository.findOne({ where: { id }, relations: { cliente: true, libro: true },
+      select: { id: true, idCliente: true, idLibro: true, totalVenta: true, fechaEmision: true, cliente: { nombre: true }, libro: { titulo: true, precio: true } } });
+
+    if (!orden) {
+      throw new NotFoundException(`La orden ${id} no existe.`);
+    }
+
+    return orden;
+  }
+-->
+
         <div class="table-responsive">
             <table class="table table-bordered">
                 <thead>
                     <tr>
                         <!-- encabezados de la lista-->
                         <th scope="col">N°</th>
+                        <th scope="col">N° Orden</th>
                         <th scope="col">idCliente</th>
-                        <th scope="col">nombreCliente</th>
+                        <!-- <th scope="col">nombreCliente</th> -->
                         <th scope="col">idLibro</th>     
-                        <th scope="col">nombreLibro</th>                   
+                        <!-- <th scope="col">nombreLibro</th>     -->               
                         <th scope="col">Cantidad</th>
-                        <th scope="col">precio Unitario</th>
+                        <th scope="col">Precio Unitario</th>
                         <th scope="col">Total Venta</th>
                         <th scope="col">Fecha Emision</th>  
                         <th scope="col">Fecha Creacion</th>    
@@ -70,11 +100,13 @@ onMounted(() => {
                 </thead>
                 <tbody>
                     <tr v-for="(orden, index) in ordenes.values()" :key="orden.id">
+                        
                         <th scope="row">{{ index + 1 }}</th>
+                        <td>{{ orden.id }}</td>
                         <td>{{ orden.idCliente }}</td>
-                        <td>{{ orden.nombreCliente }}</td>
+                        <!--<td>{{ orden.idcliente }}</td> orden.nombreCliente-->
                         <td>{{ orden.idLibro }}</td>  
-                        <td>{{ orden.nombreLibro }}</td>                   
+                        <!-- <td>{{ orden.nombreLibro }}</td>     orden.nombreLibro-->              
                         <td>{{ orden.cantidad }}</td>
                         <td>{{ orden.precioUnitario }}</td>
                         <td>{{ orden.totalVenta }}</td>

@@ -97,8 +97,11 @@ function goBack() {
                 </div>
 
                 <div class="form-floating">
-                    <input type="text" class="form-control" v-model="url" placeholder="Url" required />
                     <label for="url">URL</label>
+                    <input type="file" @change="" class="form-control-file"/>
+
+                    <!--<input type="text" class="form-control" v-model="url" placeholder="Url" required />
+                    <label for="url">URL</label>-->
                 </div>
 
                 <div class="form-floating">

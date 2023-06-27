@@ -54,6 +54,7 @@ onMounted(() => {
                 <thead>
                     <tr>
                         <th scope="col">N°</th>
+                        <th scope="col">Id Libro</th>
                         <th scope="col">Titulo</th>
                         <th scope="col">Autor</th>
                         <th scope="col">Fecha Publicacion</th>
@@ -71,6 +72,7 @@ onMounted(() => {
                 <tbody>
                     <tr v-for="(libro, index) in libros.values()" :key="libro.id">
                         <th scope="row">{{ index + 1 }}</th>
+                        <td>{{ libro.id }}</td>
                         <td>{{ libro.titulo }}</td>
                         <td>{{ libro.autor }}</td>
                         <td>{{ libro.fechaPublicacion }}</td>

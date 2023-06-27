@@ -27,6 +27,7 @@ async function editarOrden() {
             precioUnitario: precioUnitario.value,
             totalVenta: totalVenta.value,
             fechaEmision: fechaEmision.value
+            //total venta no debe editarse debe aparecer restringido y actualizado
         })
         .then(() => router.push('/ordenes'))
 }
@@ -34,9 +35,9 @@ async function editarOrden() {
 async function getOrden() {
     await http.get(`${ENDPOINT}/${id}`).then((response) => {; 
         (idCliente.value = response.data.idCliente),
-        (nombreCliente.value = response.data.nombreCliente),
+        //(nombreCliente.value = response.data.nombreCliente),
         (idLibro.value = response.data.idLibro),
-        (nombreLibro.value = response.data.nombreLibro),
+        //(nombreLibro.value = response.data.nombreLibro),
         (cantidad.value = response.data.cantidad),
         (precioUnitario.value = response.data.precioUnitario),
         (totalVenta.value = response.data.totalVenta),
@@ -95,8 +96,10 @@ onMounted(() => {
                     <label for="precioUnitario">Precio Unitario</label>
                 </div>
 
+                <!-- total venta no debe editarse debe aparecer restringido y actualizado-->
+
                 <div class="form-floating">
-                    <input type="number" class="form-control" v-model="totalVenta" placeholder="TotalVenta" required />
+                    <input type="number" class="form-control" v-model="totalVenta" placeholder="TotalVenta" required readonly/>
                     <label for="totalVenta">Total Venta</label>
                 </div>
 

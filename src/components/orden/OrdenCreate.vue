@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref } from 'vue'
+import { computed, ref } from 'vue'
 import http from '@/plugins/axios'
 import router from '@/router'
 
@@ -9,10 +9,12 @@ const props = defineProps<{
 
 const ENDPOINT = props.ENDPOINT_API ?? ''
 const idCliente = ref(0)
+//const nombreCliente = ref('')
 const idLibro = ref(0)
+//const nombreLibro = ref('')
 const cantidad = ref(0)
 const precioUnitario = ref(0)
-const totalVenta = ref(0)
+const totalVenta = computed(()=>cantidad.value*precioUnitario.value)
 const fechaEmision = ref('')
 
 async function crearOrden() {
@@ -93,7 +95,7 @@ function goBack() {
             class="form-control"
             v-model="totalVenta"
             placeholder="TotalVenta"
-            required
+            required readonly
           />
           <label for="totalVenta">Total Venta</label>
         </div>
