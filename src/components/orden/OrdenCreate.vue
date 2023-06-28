@@ -9,13 +9,14 @@ const props = defineProps<{
 
 const ENDPOINT = props.ENDPOINT_API ?? ''
 const idCliente = ref(0)
-//const nombreCliente = ref('')
+const nombreCliente = ref('')
 const idLibro = ref(0)
 //const nombreLibro = ref('')
 const cantidad = ref(0)
 const precioUnitario = ref(0)
 const totalVenta = computed(()=>cantidad.value*precioUnitario.value)
 const fechaEmision = ref('')
+
 
 async function crearOrden() {
   await http
@@ -67,7 +68,7 @@ function goBack() {
           <label for="idLibro">Id Libro</label>
         </div>
 
-        <div class="form-floating">
+        <div class="form-floating mb-3">
           <input
             type="number"
             class="form-control"
@@ -78,7 +79,7 @@ function goBack() {
           <label for="cantidad">Cantidad</label>
         </div>
 
-        <div class="form-floating">
+        <div class="form-floating mb-3">
           <input
             type="number"
             class="form-control"
@@ -89,7 +90,7 @@ function goBack() {
           <label for="precioUnitario">Precio Unitario</label>
         </div>
 
-        <div class="form-floating">
+        <div class="form-floating mb-3">
           <input
             type="number"
             class="form-control"
@@ -100,7 +101,7 @@ function goBack() {
           <label for="totalVenta">Total Venta</label>
         </div>
 
-        <div class="form-floating">
+        <div class="form-floating mb-3">
           <input
             type="date"
             class="form-control"

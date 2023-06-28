@@ -182,6 +182,7 @@ onMounted(() => {
         <div class="form-floating">
           <input
             type="number"
+            prefix="$"
             class="form-control"
             v-model="precio"
             placeholder="Precio"

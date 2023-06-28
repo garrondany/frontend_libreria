@@ -15,9 +15,8 @@ const editorial = ref('')
 const idioma = ref('castellano')
 const isbn = ref('')
 const url = ref('')
-//const tamañoArchivo = ref('')
 const numeroPaginas = ref(0)
-const stock = ref('')
+const stock = ref(0)
 const precio = ref(0)
 
 async function crearLibro() {
@@ -30,7 +29,6 @@ async function crearLibro() {
             idioma: idioma.value,
             isbn: isbn.value,
             url: url.value,
-            //tamañoArchivo: tamañoArchivo.value,
             numeroPaginas: numeroPaginas.value,
             stock: stock.value,
             precio: precio.value,
@@ -110,7 +108,7 @@ function goBack() {
                 </div>
 
                 <div class="form-floating">
-                    <input type="text" class="form-control" v-model="stock" placeholder="Stock" required />
+                    <input type="number" class="form-control" v-model="stock" placeholder="Stock" required />
                     <label for="stock">Stock</label>
                 </div>
 

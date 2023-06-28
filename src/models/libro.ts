@@ -9,7 +9,7 @@ export interface Libro {
     url: string;    
     numeroPaginas: number;
     precio: number;
-    stock: string;
+    stock: number;
     fechaCreacion: Date;
     fechaModificacion: Date;
     //tamañoArchivo: string; borrar
