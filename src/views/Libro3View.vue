@@ -55,9 +55,9 @@
                     <!-- END sidebar-box -->
                     <div class="sidebar-box">
                         <div class="bio text-center">
-                            <img src="@/assets/images/person_1.jpg" alt="Image Placeholder" class="img-fluid mb-3">
+                            <img src="@/assets/images/person_3.jpg" alt="Image Placeholder" class="img-fluid mb-3">
                             <div class="bio-body">
-                                <h2>Autor: Miguel de Cervantes Saavedra</h2>
+                                <h2>Autor: Gabriel García Marquez</h2>
                                 <p class="mb-4">Nació en Alcalá de Henares, Madrid, en 1547
                                 </p>
                             </div>

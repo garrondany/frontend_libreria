@@ -72,9 +72,9 @@
             Comprar
           </button> -->
 
-          <button type="button" class="btn btn-primary" data-bs-dismiss="modal">
+          <!-- <button type="button" class="btn btn-primary" data-bs-dismiss="modal">
               <RouterLink to="/clientes/crear">Comprar</RouterLink>
-            </button>
+            </button> -->
 
 
         </div>
