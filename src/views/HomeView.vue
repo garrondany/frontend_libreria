@@ -92,22 +92,22 @@
         </div>
         <div class="col-md-6 col-lg-3">
           <div class="blog-entry">
-            <a href="/libro2" class="img-link">
-              <img src="@/assets/images/img_3_vertical.jpg" alt="Image" class="img-fluid">
+            <a href="/libro4" class="img-link">
+              <img src="@/assets/images/img_4_vertical.jpg" alt="Image" class="img-fluid">
             </a>
             <span class="date">Jun. 15, 2023</span>
-            <h2><a href="/libro2">VER DATOS</a></h2>
+            <h2><a href="/libro4">VER DATOS</a></h2>
             <!-- <p>REFERENCIA LIBRO 3.</p>
 						 <p><a href="#" class="read-more">Continue Reading</a></p> -->
           </div>
         </div>
         <div class="col-md-6 col-lg-3">
           <div class="blog-entry">
-            <a href="/libro2" class="img-link">
-              <img src="@/assets/images/img_4_vertical.jpg" alt="Image" class="img-fluid">
+            <a href="/libro3" class="img-link">
+              <img src="@/assets/images/img_3_vertical.jpg" alt="Image" class="img-fluid">
             </a>
             <span class="date">Jun. 15, 2023</span>
-            <h2><a href="/libro2">VER DATOS</a></h2>
+            <h2><a href="/libro3">VER DATOS</a></h2>
             <!--  <p>REFERENCIA LIBRO 4.</p>
 						<p><a href="#" class="read-more">Continue Reading</a></p> -->
           </div>

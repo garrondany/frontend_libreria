@@ -107,6 +107,24 @@ const router = createRouter({
     },
 
     {
+      path: "/libro3",
+      name: "libro3",
+      // route level code-splitting
+      // this generates a separate chunk (Libro1.[hash].js) for this route
+      // which is lazy-loaded when the route is visited.
+      component: () => import("../views/Libro3View.vue"),
+    },
+
+    {
+      path: "/libro4",
+      name: "libro4",
+      // route level code-splitting
+      // this generates a separate chunk (Libro1.[hash].js) for this route
+      // which is lazy-loaded when the route is visited.
+      component: () => import("../views/Libro4View.vue"),
+    },
+
+    {
       path: "/libritos",
       name: "libritos",
       // route level code-splitting
