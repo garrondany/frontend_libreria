@@ -75,14 +75,14 @@ onMounted(() => {
                     <tr v-for="(orden, index) in ordenes.values()" :key="orden.id">
 
                         <th scope="row">{{ index + 1 }}</th>
-                        <td>{{ orden.id }}</td>
-                        <td>{{ orden.idCliente }}</td>
+                        <td align="center">{{ orden.id }}</td>
+                        <td align="center">{{ orden.idCliente }}</td>
                         <td>{{ orden.cliente.nombre }}</td> 
-                        <td>{{ orden.idLibro }}</td>
+                        <td align="center">{{ orden.idLibro }}</td>
                         <td>{{ orden.libro.titulo }}</td> 
-                        <td>{{ orden.cantidad }}</td>
-                        <td>{{ orden.precioUnitario }}</td>
-                        <td>{{ orden.totalVenta }}</td>
+                        <td align="center">{{ orden.cantidad }}</td>
+                        <td align="center">{{ orden.precioUnitario }}</td>
+                        <td align="center">{{ orden.totalVenta }}</td>
                         <td>{{ orden.fechaEmision }}</td>
                         <td>{{ orden.fechaCreacion }}</td>
                         <td>{{ orden.fechaModificacion }}</td>                  

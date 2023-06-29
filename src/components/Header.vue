@@ -40,10 +40,6 @@ const location = useRoute();
           </li>
 
           <li class="nav-item">
-            <RouterLink to="/about" class="nav-link click-scroll">Acerca De</RouterLink>
-          </li>
-
-          <li class="nav-item">
             <!-- <RouterLink to="/clientes" class="nav-link click-scroll">Clientes</RouterLink> -->
             <RouterLink v-if="authStore.token" to="/clientes" class="nav-link click-scroll">Clientes</RouterLink>
           </li>
@@ -57,6 +53,14 @@ const location = useRoute();
             <!-- <RouterLink to="/ordenes" class="nav-link click-scroll">Ordenes</RouterLink> -->
             <RouterLink v-if="authStore.token" to="/ordenes" class="nav-link click-scroll">Ordenes</RouterLink>
 
+          </li>
+          <li class="nav-item">
+            <RouterLink to="/libritos" class="nav-link click-scroll">Catálogo</RouterLink>
+            <!-- <RouterLink v-if="authStore.token" to="/ordenes" class="nav-link click-scroll">Ordenes</RouterLink> -->
+          </li>
+
+          <li class="nav-item">
+            <RouterLink to="/about" class="nav-link click-scroll">Acerca De</RouterLink>
           </li>
 
 

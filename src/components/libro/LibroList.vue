@@ -72,7 +72,7 @@ onMounted(() => {
                 <tbody>
                     <tr v-for="(libro, index) in libros.values()" :key="libro.id">
                         <th scope="row">{{ index + 1 }}</th>
-                        <td>{{ libro.id }}</td>
+                        <td align="center">{{ libro.id }}</td>
                         <td>{{ libro.titulo }}</td>
                         <td>{{ libro.autor }}</td>
                         <td>{{ libro.fechaPublicacion }}</td>
@@ -83,9 +83,9 @@ onMounted(() => {
                         <a href="#">
                             <img :src="libro.url" alt="Producto" width="50" height="50">
                         </a>
-                        <td>{{ libro.numeroPaginas }}</td>
-                        <td>{{ libro.stock }}</td>
-                        <td>{{ libro.precio }}</td>
+                        <td align="center">{{ libro.numeroPaginas }}</td>
+                        <td align="center">{{ libro.stock }}</td>
+                        <td align="center">{{ libro.precio }}</td>
                         <td>{{ libro.fechaCreacion }}</td>
                         <td>{{ libro.fechaModificacion }}</td>
                         <td>
