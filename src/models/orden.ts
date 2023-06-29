@@ -1,3 +1,6 @@
+import type { Cliente } from "./cliente";
+import type { Libro } from "./libro";
+
 export interface Orden {
     id: number;
     idCliente: number;
@@ -8,4 +11,6 @@ export interface Orden {
     fechaEmision: Date;
     fechaCreacion: Date;
     fechaModificacion: Date;
+    cliente: Cliente;
+    libro: Libro;
   }

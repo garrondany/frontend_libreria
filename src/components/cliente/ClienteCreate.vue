@@ -32,7 +32,7 @@ function goBack() {
           <RouterLink to="/">Inicio</RouterLink>
         </li>
         <li class="breadcrumb-item">
-          <RouterLink to="/interpretes">Clientes</RouterLink>
+          <RouterLink to="/s">Clientes</RouterLink>
         </li>
         <li class="breadcrumb-item active" aria-current="page">Crear</li>
       </ol>
